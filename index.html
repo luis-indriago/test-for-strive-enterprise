@@ -16,13 +16,22 @@
             width: 100%;
             z-index: 1050;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 5px 0;
+            padding: 5px 15px; /* Ajuste de padding para móviles */
+        }
+
+        .contact-info {
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
         }
 
         .social-icons .contact-info span {
             color: white;
             margin-right: 20px;
             font-size: 14px;
+            margin-bottom: 5px; /* Espaciado entre los elementos */
+        }
+
+        .social-icon {
+            margin: 0 5px; /* Espacio entre los iconos */
         }
 
         .social-icons .social-icon {
@@ -140,6 +149,19 @@
             .header-content {
                 padding: 120px 0 80px 0;
             }
+            .social-icons {
+                flex-direction: column; /* Cambiar a columna en móviles */
+                align-items: flex-start; /* Alinear a la izquierda */
+                text-align: left; /* Alinear texto a la izquierda */
+            }
+            .contact-info {
+                justify-content: flex-start; /* Alinear a la izquierda */
+            }
+
+            .social-icon {
+                margin: 5px 0; /* Espaciado vertical entre iconos */
+            }
+            
         }
 
 
@@ -193,6 +215,59 @@
 
 
 
+
+        /* Sección About Us */
+        .about-us-section {
+            background-color: rgb(22, 87, 139);
+        }
+
+        /* Icono Circular */
+        .about-us-icon {
+            background-color: #f0ad4e; /* bg-warning */
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            margin-top: 4px;
+        }
+
+        /* Divider Horizontal */
+        .about-us-divider {
+            background-color: #f0ad4e; /* bg-warning */
+            height: 2px;
+            width: 210px;
+        }
+
+        /* Imagen con Bordes Personalizados */
+        .custom-border {
+            border-radius: 12px;
+            border: 5px solid rgb(198, 202, 206);
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Ajustes Responsivos */
+        @media (max-width: 767.98px) {
+            .about-us-divider {
+                width: 100%; /* Divider ocupa todo el ancho en pantallas pequeñas */
+            }
+            .about-us-icon {
+                margin-right: 1rem; /* Ajuste de margen en móviles */
+            }
+            .about-us-section {
+                padding: 2rem 1rem; /* Ajuste de padding en móviles */
+            }
+            .about-us-section p {
+                font-size: 1rem; /* Ajuste del tamaño de fuente */
+            }
+            .btn-read-more {
+                width: 100%; /* Botón ocupa todo el ancho en móviles */
+                text-align: center;
+            }
+        }
+
+
+
         /* section benefits */
         .bg-features {
             position: relative;
@@ -242,124 +317,141 @@
         }
 
 
-    /* Sección principal de "Our Team" */
-    .our-team-section {
-            padding: 50px 0;
-            background: #f8f9fa;
-        }
+        /* Sección principal de "Our Team" */
+        .our-team-section {
+                padding: 50px 0;
+                background: #f8f9fa;
+            }
 
-        /* Título de la sección */
-        .section-title {
-            margin-bottom: 50px;
-            text-align: center;
-        }
+            /* Título de la sección */
+            .section-title {
+                margin-bottom: 50px;
+                text-align: center;
+            }
 
-        .section-title h2 {
-            font-family: 'Arial', sans-serif;
-            font-weight: 700;
-            font-size: 36px;
-        }
+            .section-title h2 {
+                font-family: 'Arial', sans-serif;
+                font-weight: 700;
+                font-size: 36px;
+            }
 
-        .section-title span {
-            display: block;
-            font-size: 18px;
-            color: #ffbf00;
-            margin-bottom: 10px;
-        }
+            .section-title span {
+                display: block;
+                font-size: 18px;
+                color: #ffbf00;
+                margin-bottom: 10px;
+            }
 
-        /* Estilos de las tarjetas de equipo */
-        .team-card {
-            background: #fff;
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
+            /* Estilos de las tarjetas de equipo */
+            .team-card {
+                background: #fff;
+                border: none;
+                border-radius: 15px;
+                overflow: hidden;
+                transition: 0.3s;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
 
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+            .team-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
 
-        /* Imagen superior de la tarjeta */
-        .team-card img {
-            object-fit: cover;
-        }
+            /* Imagen superior de la tarjeta */
+            .team-card img {
+                object-fit: cover;
+            }
 
-        /* Imagen redonda del perfil */
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #fff;
-            position: absolute;
-            top: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+            /* Imagen redonda del perfil */
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 4px solid #fff;
+                position: absolute;
+                top: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
 
-        /* Contenido de la tarjeta */
-        .card-body {
-            padding-top: 60px;
-            text-align: center;
-        }
+            /* Contenido de la tarjeta */
+            .card-body {
+                padding-top: 60px;
+                text-align: center;
+            }
 
-        .card-body h4 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
+            .card-body h4 {
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
 
-        .card-body p {
-            font-size: 14px;
-            color: #ffbf00;
-        }
+            .card-body p {
+                font-size: 14px;
+                color: #ffbf00;
+            }
 
-        .card-body .btn {
-            margin-top: 15px;
-            color: #ffbf00;
-            border-color: #ffbf00;
-            border-radius: 25px;
-        }
+            .card-body .btn {
+                margin-top: 15px;
+                color: #ffbf00;
+                border-color: #ffbf00;
+                border-radius: 25px;
+            }
 
-        .card-body .btn:hover {
-            background: #ffbf00;
-            color: #fff;
-        }
+            .card-body .btn:hover {
+                background: #ffbf00;
+                color: #fff;
+            }
 
-        /* Botón de "View More" */
-        .view-more-btn {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
+            /* Botón de "View More" */
+            .view-more-btn {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
 
-        .view-more-btn .btn {
-            background: #ffbf00;
-            color: #fff;
-            font-size: 18px;
-            padding: 10px 30px;
-            border-radius: 25px;
-        }
+            .view-more-btn .btn {
+                background: #ffbf00;
+                color: #fff;
+                font-size: 18px;
+                padding: 10px 30px;
+                border-radius: 25px;
+            }
 
-        .view-more-btn .btn:hover {
-            background: #e6ac00;
-            color: #fff;
-        }
+            .view-more-btn .btn:hover {
+                background: #e6ac00;
+                color: #fff;
+            }
+
+
+            /*Footer*/
+            @media (max-width: 767.98px) {
+                .text-md-start {
+                    text-align: center !important;
+                }
+                .social-icons {
+                    margin: 15px 0;
+                }
+                footer .input-group {
+                    justify-content: center;
+                }
+                footer .input-group .form-control {
+                    max-width: 250px; /* Limitar el ancho del input en pantallas móviles */
+                }
+            }
 
 
 
-        .text-color-blue {
-            color: #375a7f;
-        }
+            .text-color-blue {
+                color: #375a7f;
+            }
 
-        .bg-color-blue{
-            background-color: #375a7f;
-        }
+            .bg-color-blue{
+                background-color: #375a7f;
+            }
 
     </style>
 
@@ -538,37 +630,41 @@
         </div>
     </section>
 
-    <!--section about us-->
-    <div style="background-color: rgb(22, 87, 139);" class="pb-5">
+    <!-- Section About Us -->
+    <section class="about-us-section pb-5">
         <div class="container pb-4">
-            <div class="col-12">
-                <div class="d-flex align-items-baseline pt-5 text-white">
-                    <div class="rounded-circle bg-warning mr-3" style="height: 10px; width: 10px; margin-top: 4px;"></div>
-                    <div class="text-white">
-                        <h2 class="h5 mb-0">About Us</h2>
-                        <div class="bg-warning mt-1" style="height: 2px; width: 210px;"></div>
-                        <h3 class="h4">Know everything we do for you</h3>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Título de la Sección -->
+                    <div class="d-flex align-items-baseline pt-5 text-white">
+                        <div class="about-us-icon me-3"></div>
+                        <div>
+                            <h2 class="h5 mb-0 ml-3">About Us</h2>
+                            <div class="about-us-divider mt-1"></div>
+                            <h3 class="h4">Know everything we do for you</h3>
+                        </div>
+                    </div>  
+                    
+                    <!-- Contenido Principal -->
+                    <div class="row align-items-center justify-content-between mt-4">
+                        <!-- Texto y Botón -->
+                        <div class="col-12 col-md-6 mb-4 mb-md-0 text-white">
+                            <p>
+                                The university is a physical place, buildings, laboratories, libraries ... 
+                                where students and teachers meet. The university is also a human-social system, 
+                                that is, a set of elements that are related and interact with each other.
+                            </p>
+                            <a href="#" class="btn-read-more btn btn-warning rounded-pill border-white">Read More</a>
+                        </div> 
+                        <!-- Imagen -->
+                        <div class="col-12 col-md-6">
+                            <img class="img-fluid rounded custom-border" src="assets/imagenes/IMAGE ABOUT US.jpg" alt="Smiling student at laptop">
+                        </div>
                     </div>
                 </div>  
-                
-                <div class="d-flex align-items-center justify-content-between text-white">
-                    <div>
-                        <p class="w-75">
-                            The university is a physical place, buildings, laboratories, libraries ... 
-                            where students and teachers meet. The university is also a human-social system, 
-                            that is, a set of elements that are related and interact with each other.
-                        </p>
-                        <a href="#" class="btn-read-more btn btn-warning rounded-pill border-white">Read More</a>
-
-                    </div> 
-                    <div>
-                        <img class="object-fit-cover" style="width: 315px; height: 220px; border-radius: 12px; border: 5px solid rgb(198, 202, 206);" src="assets/imagenes/IMAGE ABOUT US.jpg" alt="Smiling student at laptop">
-                    </div>
-                    
-                </div>
             </div>  
         </div>    
-    </div>
+    </section>
 
 
     <!--Section Benefits-->
@@ -710,112 +806,77 @@
     
 
 
-    <!-- Footer -->
-    <footer class="text-center text-lg-start bg-body-tertiary text-white">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-body-tertiary text-white">
 
-        <!-- Section: Social media -->
-    
-        <!-- Section: Links  -->
-        <section class="p-4" style="background-color: #375a7f;">
-            <div class="container-fluid text-center text-md-start mt-5" >
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                       <img style="width: 200px;" src="assets/imagenes/LOGO.png" alt="">
-                    </div>
-                    <!-- Grid column -->
-    
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="font-weight-bold mb-4">
-                            Quick Links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">About Us</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Courses</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Team</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Contact Us</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-    
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-left">
-                        <!-- Links -->
-                        <h6 class="text-uppercase mb-4">Contact Info</h6>
-                        <p>
-                            <i class="fas fa-phone me-3"></i> 
-                            123 456 789
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@email.com
-                        </p>
-                        <p>
-                            <i class="fas fa-map-marker-alt me-3"></i> 
-                            address, United States
-                        </p>
-                    
-                        <div class="text-center">
-                            <a  class="text-white" href=""><i class="fab fa-facebook-f me-3"></i> </a>
-                            <a class="text-white" href=""><i class="fab fa-instagram me-3"></i> </a>
-                            <a class="text-white" href=""><i class="fab fa-youtube me-3"></i> </a>
+            <!-- Section: Links -->
+            <section class="p-4" style="background-color: #375a7f;">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Logo Column -->
+                        <div class="col-12 col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center text-md-start">
+                            <!-- Content -->
+                            <img style="max-width: 150px;" src="assets/imagenes/LOGO.png" alt="">
                         </div>
-                    </div>
-                    <!-- Grid column -->
-    
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase mb-4">NewsLetter</h6>
-                        <p>
-                            Receive all our promotions and notifications
-                        </p>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append bg-white">
-                              <button class="btn btn-warning rounded text-white" type="button">Button</button>
+
+                        <!-- Quick Links Column -->
+                        <div class="col-6 col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="font-weight-bold mb-4">Quick Links</h6>
+                            <p><a href="#!" class="text-reset">About Us</a></p>
+                            <p><a href="#!" class="text-reset">Courses</a></p>
+                            <p><a href="#!" class="text-reset">Team</a></p>
+                            <p><a href="#!" class="text-reset">Contact Us</a></p>
+                        </div>
+
+                        <!-- Contact Info Column -->
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center text-md-start">
+                            <!-- Links -->
+                            <h6 class="text-uppercase mb-4">Contact Info</h6>
+                            <p><i class="fas fa-phone me-3"></i> 123 456 789</p>
+                            <p><i class="fas fa-envelope me-3"></i> info@email.com</p>
+                            <p><i class="fas fa-map-marker-alt me-3"></i> address, United States</p>
+                            <div class="text-center text-md-start">
+                                <a class="text-white" href="#"><i class="fab fa-facebook-f me-3"></i></a>
+                                <a class="text-white" href="#"><i class="fab fa-instagram me-3"></i></a>
+                                <a class="text-white" href="#"><i class="fab fa-youtube me-3"></i></a>
                             </div>
                         </div>
-                     
+
+                        <!-- Newsletter Column -->
+                        <div class="col-12 col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center text-md-start">
+                            <!-- Links -->
+                            <h6 class="text-uppercase mb-4">Newsletter</h6>
+                            <p>Receive all our promotions and notifications</p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" placeholder="Email">
+                                <div class="input-group-append bg-white">
+                                    <button class="btn btn-warning rounded text-white" type="button">Button</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Grid column -->
+                    <!-- Grid row -->
                 </div>
-                <!-- Grid row -->
+            </section>
+            <!-- Section: Links -->
+
+            <!-- Copyright -->
+            <div style="background-color: #375a7f">
+                <div class="container d-flex flex-column flex-md-row justify-content-between py-3 border-top text-center text-md-start">
+                    <div class="mb-3 mb-md-0">
+                        <div>© Copyright University. All Rights Reserved</div>
+                        <div>This Website Was Design and Developed by <a href="josesilvera.com">Josesilvera.com</a></div>
+                    </div>
+                    <div class="text-center">
+                        <img style="max-width: 80px;" src="assets/imagenes/logo Silvera Enterprises.png" alt="">
+                    </div>
+                </div>
             </div>
-        </section>
-        <!-- Section: Links  -->
-    
-        <!-- Copyright -->
-        <div style="background-color: #375a7f">
-                <div class="container d-flex justify-content-between py-3 border-top">
-                    <div style="width: 320px;" class="text-left">
-                        <div style="width: 320px;">
-                            © Copyright University. All Rights Reserved
-                        </div>
-                        <div style="width: 500px;">
-                            This Website  Was Design and Developed by <a href="josesilvera.com">Josesilvera.com</a>
-                        </div>
-                    </div>
-                    <div>
-                        <img style="width: 100px;" src="assets/imagenes/logo Silvera Enterprises.png" alt="">
-                    </div>
-            
-                </div>
-        </div>
-       
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
       
     
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
